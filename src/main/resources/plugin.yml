@@ -1,0 +1,5 @@
+name: RPGCore
+author: "MohiPE(박성민)"
+version: "1.0.0"
+main: kr.mohi.rpgcore.RPGCorePlugin
+api: ["1.0.0"]
