@@ -1,7 +1,7 @@
 package kr.mohi.rpgcore.skill;
 
-import cn.nukkit.Player;
 import cn.nukkit.Server;
+import kr.mohi.rpgcore.RPGPlayer;
 
 public interface ISkill {
 	
@@ -11,12 +11,6 @@ public interface ISkill {
 	 * @return This skill name.
 	 */
 	String getName();
-	
-	/**
-	 * 
-	 * @return Instance of this skill.
-	 */
-	Skill getSkill();
 	
 	/**
 	 * Returns level limit of this skill.
@@ -37,7 +31,7 @@ public interface ISkill {
 	 * 
 	 * @return {@code Player} who has this skill.
 	 */
-	Player getPlayer();
+	RPGPlayer getPlayer();
 	
 	/**
 	 * Returns server

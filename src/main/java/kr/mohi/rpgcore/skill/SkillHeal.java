@@ -1,22 +1,14 @@
 package kr.mohi.rpgcore.skill;
 
-import cn.nukkit.Player;
-import kr.mohi.rpgcore.jobs.Job;
+import kr.mohi.rpgcore.RPGPlayer;
 
 public abstract class SkillHeal extends Skill {
 	/**
 	 * Healing skills extends this.
 	 */
-	public final Integer affiliation = Skill.HEAL;
 
-	public SkillHeal(Player player, Job job) {
-		super(player, job);
+	public SkillHeal(RPGPlayer player) {
+		super(player);
+		this.type = Skill.HEAL;
 	}
-
-	@Override
-	public Integer getAffiliation() {
-		return this.affiliation;
-	}
-
-	public abstract Integer getIntensity();
 }

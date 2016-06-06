@@ -10,12 +10,22 @@
 			<id>mengcraft</id>
 			<url>http://ci.mengcraft.com:8080/plugin/repository/everything/</url>
 		</repository>
+		<repository>
+			<id>organization</id>
+			<url>https://github.com/organization/maven-repo/raw/master/</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>cn.nukkit</groupId>
 			<artifactId>nukkit</artifactId>
 			<version>1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>hmhmmhm</groupId>
+			<artifactId>ParfaitAuth</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
