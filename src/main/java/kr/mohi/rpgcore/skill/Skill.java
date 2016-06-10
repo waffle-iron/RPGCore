@@ -12,7 +12,7 @@ public class Skill implements ISkill {
 	/**
 	 * Every skill extends this.
 	 */
-	private Integer level = new Integer(0); // Skill level 0 means
+	protected Integer level = new Integer(0); // Skill level 0 means
 											// disabled-skill. You can't use
 											// this skill if the level is 0.
 	@SuppressWarnings("rawtypes")
@@ -34,7 +34,7 @@ public class Skill implements ISkill {
 	public Skill(RPGPlayer player) {
 		this.player = player;
 	}
-
+	
 	public String getName() {
 		return this.name;
 	}

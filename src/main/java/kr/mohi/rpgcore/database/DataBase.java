@@ -1,6 +1,8 @@
 package kr.mohi.rpgcore.database;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import cn.nukkit.Player;
@@ -14,7 +16,7 @@ import kr.mohi.rpgcore.skill.Skill;
 
 public class DataBase {
 	RPGCorePlugin plugin;
-	Set<RPGPlayer> players = new HashSet<RPGPlayer>();
+	Map<String, RPGPlayer> players = new HashMap<String, RPGPlayer>();
 	Set<Class<Skill>> skills = new HashSet<Class<Skill>>();
 
 	public DataBase(RPGCorePlugin plugin) {
@@ -32,12 +34,12 @@ public class DataBase {
 		return ParfaitAuth.getAccountByNickName(player);
 	}
 	
-	public Set<RPGPlayer> getOnlinePlayers() {
+	public Map<String, RPGPlayer> getOnlinePlayers() {
 		return this.players;
 	}
 	
 	public void addOnlinePlayers(RPGPlayer player) {
-		this.players.add(player);
+		this.players.put(player.getName(), player);
 	}
 
 	/**

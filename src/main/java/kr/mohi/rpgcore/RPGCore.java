@@ -2,7 +2,6 @@ package kr.mohi.rpgcore;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Set;
 
 import cn.nukkit.Player;
 import hmhmmhm.ParfaitAuth.Account;
@@ -16,14 +15,14 @@ public class RPGCore {
 	}
 
 	public static void addSkill(Skill skill) {
-
+		skill.getPlayer().addSkill(skill);
 	}
 
 	public static Map<String, Skill> getSkills(RPGPlayer player) {
 		return player.getSkills();
 	}
 
-	public static Set<RPGPlayer> getOnlinePlayers() {
+	public static Map<String, RPGPlayer> getOnlinePlayers() {
 		return RPGCore.getDataBase().getOnlinePlayers();
 	}
 

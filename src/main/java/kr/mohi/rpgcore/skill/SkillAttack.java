@@ -4,9 +4,11 @@ import kr.mohi.rpgcore.RPGPlayer;
 
 public abstract class SkillAttack extends Skill {
 
-	
-	public SkillAttack(RPGPlayer player) {
+	public SkillAttack(RPGPlayer player, String name, Integer level, Integer limitLevel) {
 		super(player);
+		this.name = name;
+		this.level = level;
+		this.limitLevel = limitLevel;
 		this.type = Skill.ATTACK;
 	}
 }

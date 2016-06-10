@@ -57,19 +57,23 @@ public class RPGPlayer {
 		return this.skills;
 	}
 
-	public void updateAttribute(Attribute ...attributes) {
+	public void addSkill(Skill skill) {
+		this.skills.put(skill.getName(), skill);
+	}
+
+	public void updateAttribute(Attribute... attributes) {
 		UpdateAttributesPacket pk = new UpdateAttributesPacket();
 		pk.entityId = 0;
 		pk.entries = attributes;
 		this.player.dataPacket(pk);
 	}
-	
+
 	public Attribute expAttribute() {
 		Attribute exp = Attribute.getAttributeByName("player.experience");
 		exp.setValue(this.stat.getExpBarPercent());
 		return exp;
 	}
-	
+
 	public Attribute levelAttribute() {
 		Attribute level = Attribute.getAttributeByName("player.level");
 		level.setValue(this.stat.getLevel());
